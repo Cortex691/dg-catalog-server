@@ -42,17 +42,22 @@ const {
   getGostProductById,
 } = require("./gost");
 
-dotenv.config({ path: "./.env" });
-
 const corsOptions = {
   origin: "http://localhost:3000",
   optionsSuccessStatus: 200,
 };
 
+dotenv.config({ path: "./.env" });
+
 const app = express();
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.json("Server is working?");
+});
 
 app.post("/login", adminLogin);
 
