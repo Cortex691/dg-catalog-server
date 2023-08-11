@@ -122,6 +122,7 @@ app.post("/gost/get-products", getGostProducts);
 
 app.post("/gost/get-product", getGostProductById);
 
+const port = process.env.PORT || 9001;
 app.listen(3001, () => {
-  console.log("App is running on port 3001");
+  console.log("App is running on port", port);
 });

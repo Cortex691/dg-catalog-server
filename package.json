@@ -2,7 +2,7 @@
   "name": "dg-catalog-server",
   "version": "1.0.0",
   "description": "",
-  "main": "api.js",
+  "main": "index.js",
   "engines": {
     "node": "14.x"
   },
